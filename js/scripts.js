@@ -1,3 +1,5 @@
+//back-end
+
 var rolldice = function() {
 
   return Math.floor(Math.random() * 6) + 1;
@@ -28,8 +30,7 @@ player.prototype.rollone = function() {
 
     alert("The current Player Scored a 1 please switch !")
 
-  }
-   else {
+  } else {
 
     this.currentscore += this.roll;
 
@@ -57,7 +58,7 @@ player.prototype.winner = function() {
 
   if (this.totalscore >= 100) {
 
-    alert("You are the Winner ! Yaay")
+    alert("Winner ! Yaay")
 
   }
 
