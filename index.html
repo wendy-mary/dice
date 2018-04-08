@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <title>
@@ -10,45 +11,67 @@
 </head>
 
 <body>
-  <div class="jumbotron">
-    <h1>Enjoy pig dice game</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <form id="name">
-        <div class="form-group">
-          <label for="name" id="pl">Player1</label>
-          <input type="text" class="form-control" id="play">
-          <button type="submit" class="btn btn-success ">roll</button>
-          <button type="submit" class="btn btn-danger ">hold</button>
+  <div class="intro">
+    <div class="jumbotron">
+      <h1>Enjoy pig dice game</h1>
+    </div>
+    <ol>
+      <ul>
+        <div class="players">
+          <div class="row">
+            <div class="col-md-4">
+              <form id="player1">
+                <div class="form-group">
+                  <label for="name">Player1</label>
+                  <input type="text" class="form-control" id="player1">
 
+                </div>
+              </form>
+            </div>
+
+
+
+
+            <div class="col-md-4">
+              <form id="player2">
+                <div class="form-group">
+                  <label for="name" >Player2</label>
+                  <input type="text" class="form-control" id="player2">
+
+                </div>
+              </form>
+              <button id="start" class="btn btn-success">start</button>
+
+            </div>
+          </div>
         </div>
+        <div class="container-fluid">
+          <div class="playerconsolecontainer">
+            <div class="innerContainer">
+              <div class="row">
+                <div class="col-md-4">
+                  <h2 id="player1"></h2>
+                  <button id="roll" class="btn btn-success ">roll</button>
+                  <button id="hold" class="btn btn-danger ">hold</button>
 
-
+                  <h2> rolls:<span id="rolls"></span>
+  <p>currentscore:<span id="currentscore"></span>
+    <p>totalscore:<span id="totalscore"></span>
     </div>
     <div class="col-md-4">
-      <div class="form-group">
-        <label for="name" id="pla">Player2</label>
-        <input type="text" class="form-control" id="pla">
-        <button type="submit" class="btn btn-success id"rol">roll</button>
-        <button type="submit" class="btn btn-danger id"">hold</button>
-      </div>
-    </div>
-  </div>
+      <h2 id="player2"></h2>
+                  <button id="rol" class="btn btn-success ">roll</button>
+                  <button id="hol" class="btn btn-danger ">hold</button>
 
-  <div class="row">
-    <center>
-      <div class="col-md-4">
-
-    </center>
-    </form>
-    </div>
+                  <h2> rolls:<span id="rolls1"></span>
+<p>currentscore:<span id="currentscore1"></span>
+<p>totalscore:<span id="totalscore1"></span>
+</div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-
-    </div>
-  </div>
+  <button id="new" class="btn btn-info">newgame</button>
+</div>
+</div>
+</div>
 
 
   <script src="js/jquery-3.3.1.js"></script>
