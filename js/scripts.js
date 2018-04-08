@@ -1,4 +1,4 @@
-var throwdice = function() {
+var rolldice = function() {
 
   return Math.floor(Math.random() * 6) + 1;
 
@@ -28,7 +28,8 @@ player.prototype.rollone = function() {
 
     alert("The current Player Scored a 1 please switch !")
 
-  } else {
+  }
+   else {
 
     this.currentscore += this.roll;
 
@@ -40,7 +41,7 @@ player.prototype.rollone = function() {
 
 player.prototype.hold = function() {
 
-  this.total += this.currentscore;
+  this.totalscore += this.currentscore;
 
   this.currentscore = 0;
 
@@ -54,7 +55,7 @@ player.prototype.hold = function() {
 
 player.prototype.winner = function() {
 
-  if (this.total >= 100) {
+  if (this.totalscore >= 100) {
 
     alert("You are the Winner ! Yaay")
 
@@ -99,14 +100,15 @@ $(document).ready(function() {
 
     $("button#roll").click(function(event) {
 
-      player1.roll = throwdice();
+      player1.roll = rolldice();
 
 
-      $("#roll").text(playerName1.roll);
+      $("#roll").text(player1.roll);
 
       player1.rollone();
 
       $("#currentscore").text(player1.currentscore);
+
 
     })
 
@@ -114,13 +116,14 @@ $(document).ready(function() {
 
     $("button#rol").click(function(event) {
 
-      player2.roll = throwdice();
+      player2.roll = rolldice();
 
       $("#rol").text(player2.roll);
 
       player2.rollone();
 
       $("#currentscore1").text(player2.currentscore);
+      $("#totalscore1").text(player2.totalscore);
 
     })
 
@@ -146,7 +149,7 @@ $(document).ready(function() {
 
       player2.hold();
 
-      $("#totalscore1").text(playerName2.total)
+      $("#totalscore1").text(player2.totalscore)
 
       $("#currentscore1").empty();
 
