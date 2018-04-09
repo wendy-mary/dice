@@ -46,26 +46,26 @@ player.prototype.hold = function() {
 
   this.currentscore = 0;
 
-  // Changing the player
+  // next player
 
-  alert("The current player has Held the game pass on to the next player");
+  alert(" next player");
 
 }
 
-//Checking for the winner
+// winner
 
 player.prototype.winner = function() {
 
   if (this.totalscore >= 100) {
 
-    alert("Winner ! Yaay")
+    alert("Winner ! ")
 
   }
 
 }
 
 
-//Function for Starting a new game
+// new game
 
 player.prototype.newGame = function(roll, currentscore, totalscore) {
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
     $("h2#player2").text(player2Name + " :");
 
-    //Player1 Rolling dice and checking if value is equal to one and showing the round total
+    //Player1 Rolling dice
 
     $("button#roll").click(function(event) {
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
     })
 
-    //Player 2 rolling Dice and checking if the value is equal to Onea nd showing the round total
+    //Player 2 rolling Dice
 
     $("button#rol").click(function(event) {
 
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
     })
 
-    // player 1 Holding and printing the totoal Score and checking for the winner
+    // player 1 Holding
 
     $("button#hold").click(function(event) {
 
@@ -144,7 +144,7 @@ $(document).ready(function() {
 
     });
 
-    // Player 2 Holding and printing the total Score and checking for the winner
+    // Player 2 Holding
 
     $("button#hol").click(function(event) {
 
@@ -160,7 +160,7 @@ $(document).ready(function() {
 
     });
 
-    //Starting a New game
+    // New game
 
     $("button#new").click(function() {
 
